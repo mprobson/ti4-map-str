@@ -16,5 +16,8 @@ func main() {
   mapStr[27] = "85A0"
   mapStr[28] = "84A0"
 
-  fmt.Println(mapStr)
+  for _, v := range mapStr {
+    fmt.Print(v, " ")
+  }
+  fmt.Println()
 }
