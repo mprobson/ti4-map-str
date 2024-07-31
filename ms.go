@@ -8,18 +8,13 @@ import (
 func main() {
   mapStr := os.Args[1:]
 
-  countZeros := 0
-  for index, tile := range mapStr {
-    if tile == "0" {
-      if countZeros == 0 {
-        mapStr[index] = "86A0"
-      } else if countZeros == 1 {
-        mapStr[index] = "88A0"
-      }
-
-      countZeros++
-    }
-  }
+  mapStr[3]  = "86A0"
+  mapStr[11] = "88A0"
+  mapStr[12] = mapStr[13]
+  mapStr[13] = "88A0"
+  mapStr[26] = "83A0"
+  mapStr[27] = "85A0"
+  mapStr[28] = "84A0"
 
   fmt.Println(mapStr)
 }
